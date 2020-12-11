@@ -1,5 +1,8 @@
 #ifndef COMPLEX_NUMBER_H
 #define COMPLEX_NUMBER_H
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct {
 	double re;
@@ -34,7 +37,7 @@ typedef enum {
 	Trigonometric,
 } Format;
 
-char* toString(ComplexNumber number, Format format = Algebraic);
+char* toString(ComplexNumber number, Format format);
 
 
 #endif
