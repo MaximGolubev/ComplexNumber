@@ -1,4 +1,6 @@
 #include "ComplexNumber.h"
+#include <assert.h>
+#include <math.h>
 
 ComplexNumber add(ComplexNumber first, ComplexNumber second) {
 	ComplexNumber result;
@@ -18,6 +20,8 @@ ComplexNumber div(ComplexNumber first, ComplexNumber second) {
 	double c = second.re;
 	double d = second.im;
 
+	assert(fabs(c) + fabs(d));
+
 	result.re = (a*c + b*d) / (c*c + d*d);
 	result.im = (b*c - a*d) / (c*c + d*d);
 
@@ -26,6 +30,9 @@ ComplexNumber div(ComplexNumber first, ComplexNumber second) {
 
 ComplexNumber div(ComplexNumber first, double second) {
 	ComplexNumber result;
+
+	assert(second);
+
 	result.re = first.re / second;
 	result.im = first.im / second;
 
