@@ -22,6 +22,9 @@ ComplexNumber mul(ComplexNumber first, double second);
 ComplexNumber div(ComplexNumber first, ComplexNumber second);
 ComplexNumber div(ComplexNumber first, double second);
 
+// pow
+ComplexNumber pow(ComplexNumber base, const unsigned int power);
+
 // abs
 double abs(ComplexNumber number);
 
